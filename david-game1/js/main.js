@@ -13,7 +13,7 @@ window.onload = function() {
  var game = new Phaser.Game(1136, 600, Phaser.AUTO, 'game', {preload: preload, create: create, update: update });
 
 function preload() {
-    game.load.spritesheet('adventurer','./david-game1/assets/adventurer.png',50,37);
+    game.load.spritesheet('adventurer','./assets/adventurer.png',50,37);
     game.load.spritesheet('adventurer2','./david-game1/assets/adventurer2.png',50,37);
     game.load.image('ground','./david-game1/assets/platform.png');
     game.load.image('background','./david-game1/assets/background2.jpg');
