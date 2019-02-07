@@ -13,12 +13,12 @@ window.onload = function() {
  var game = new Phaser.Game(1136, 600, Phaser.AUTO, 'game', {preload: preload, create: create, update: update });
 
 function preload() {
-    game.load.spritesheet('adventurer','./assets/adventurer.png',50,37);
-    game.load.spritesheet('adventurer2','./assets/adventurer2.png',50,37);
-    game.load.image('ground','./assets/platform.png');
-    game.load.image('background','./assets/background2.jpg');
-    game.load.audio('music', './assets/music.mp3');
-    game.load.audio('jump','./assets/jump.mp3');
+    game.load.spritesheet('adventurer','./david-game1/assets/adventurer.png',50,37);
+    game.load.spritesheet('adventurer2','./david-game1/assets/adventurer2.png',50,37);
+    game.load.image('ground','./david-game1/assets/platform.png');
+    game.load.image('background','./david-game1/assets/background2.jpg');
+    game.load.audio('music', './david-game1/assets/music.mp3');
+    game.load.audio('jump','./david-game1/assets/jump.mp3');
 
 
 
