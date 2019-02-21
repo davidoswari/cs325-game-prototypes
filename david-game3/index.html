@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Phaser Basic Project Template</title>
+	<script src="js/phaser.min.js"></script>
+	<!-- Boot.js must come first since it creates the BasicGame object
+	that stores all the states. -->
+	<script src="js/Boot.js"></script>
+	<script src="js/Preloader.js"></script>
+	<script src="js/MainMenu.js"></script>
+    <script src="js/WinMenu.js"></script>
+    <script src="js/LoseMenu.js"></script>
+	<script src="js/Game.js"></script>
+	<!-- main.js must come last since it references the other ones. -->
+	<script src="js/main.js"></script>
+
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+<div id="game"></div>
+<div id="readme">
+<h2>Final Exam</h2>
+
+<ul>
+<li><strong>Originality:</strong>
+    Uncommon game setting, with 2 overlapping goals: avoid being caught and get answers from classmates.
+</li>
+
+<li><strong>Technical Merit:</strong>
+    All you need is a keyboard to play, so there is nothing unique in terms of technical merit.
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+I learned how to manage different game states to make a more complex game. The easiest part was the sprites, because I chose very simple designs for characters. Hardest part was probably manually doing overlap boxes for the cheating zones. Making the map from scratch also was difficult, so I think I will try to use tilemap next time. I also wanted to make variations on the path of the professor, but I fell short on time.
+</li>
+
+<li><strong>Prototype Assets:</strong>
+<ul>
+<li>Main Menu Image: <a href="https://www.123rf.com/photo_55281069_final-exam-isolated-red-stamp-on-a-solid-white-background.html">123RF</a>.</li>
+<li>Lose Menu Image: <a href="https://crossfitodyssey.com/i-am-a-failure/">Cross Fit Odyssey</a>.</li>
+<li>Win Menu Image: <a href="http://www.darwinelementary.com/report-card-pick-up-success-exito-en-la-recogida-de-calificaciones/report-card-a/">Darwin Elementary</a>.</li>
+<li>Preload Image: <a href="http://www.stclair-src.org/news/awareness/go-exams-plan">The Saint Scene</a></li>
+<li>Button and Loading: from game-state template</li>
+<li>School Bell Sound: <a href="https://www.zedge.net/find/ringtones/japanese%20school%20bell">Zedge</a>.</li>
+<li>Ping Sound: <a href="http://www.orangefreesounds.com/ping-sound-effect/">Orange Free Sounds</a>.</li>
+<li>Background Music: <a href="https://www.stafamp3.band/music/caste-room-instrumental.html">Stafa</a></li>
+    
+    
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+Which other game most closely resembles your game? If you are borrowing code from a Phaser Example, you must say so here. If you borrow code from elsewhere, you must say so here.
+<ul>
+<li>I made this game from scratch, but it was based off of a really old flash game called "The Classroom". Theme is similar, but made a few changes in terms of detection, the number of targets, and that you must return after every target rather than just winning right away.</li>
+</ul>
+</li>
+
+<li><strong>High Concept:</strong>
+A singleplayer game that revolves around strategically moving around the classroom to cheat off of your smart classmates, while avoiding the detection of the professor.
+</li>
+
+<li><strong>Theme:</strong>
+The theme is "Last Day of School"
+</li>
+
+<li><strong>Mandated Variety:</strong>
+This is an action/adventure type game that has input from the keyboard to move. There is no randomness, but instead focuses on strategic movement to go for the objectives, and avoid detection.
+</li>
+
+<li><strong>Prototype Goal:</strong>
+The mechanic of the game is running away from a box which is used to detect sprite overlap. The other boxes are around the orange characters' tests, which detect whether an input key is being pressed and whether their is overlap with the player.
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+A slightly challenging experience with minimal controls.
+</li>
+
+<li><strong>Gameplay:</strong>
+The goal of the game is to copy answers from the orange characters' tests, which will be used to increase your test percentage. After copying from each orange student, you must return back to your desk to write the answers on your own paper. At the same time, you must avoid the professor by staying out of the red box. The only safe spot is your desk, where you can be in the red box without failing. The controls are the arrow keys to move, and the "E" key to copy answers. Dialogue will appear when you start to copy, and when you have finished copying which will tell you when to go back to your desk.
+</li>
+
+<li><strong>Strategies:</strong>
+It will be effective to move when you are a safe distance from the detection zone. 
+You can also squeeze between students and the desks but it is a tight fit.
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+You are a student in a college classroom and the spring semester is about to end. On the last day of school, you have a final exam that you must pass in order to graduate. 
+However, you forgot to study because you were too busy. So, in order to graduate on time, you decide to cheat off of the smartest students in the class.
+</li>
+
+<li><strong>Target Audience:</strong>
+Casual players, like a bit of a challenge. 
+</li>
+
+<li><strong>Play Time:</strong>
+1-2 minutes
+</li>
+
+</ul>
+</div>
+</body>
+</html>
