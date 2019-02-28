@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Phaser Basic Project Template</title>
+	<script src="js/phaser.min.js"></script>
+	<!-- Boot.js must come first since it creates the BasicGame object
+	that stores all the states. -->
+	<script src="js/Boot.js"></script>
+	<script src="js/Preloader.js"></script>
+	<script src="js/MainMenu.js"></script>
+	<script src="js/Game.js"></script>
+    <script src="js/EndMenu.js"></script>
+        <script src="js/EndMenu2.js"></script>
+	<!-- main.js must come last since it references the other ones. -->
+	<script src="js/main.js"></script>
+
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+<div id="game"></div>
+<div id="readme">
+<h2>Adventurer Fight 2</h2>
+
+<ul>
+<li><strong>Originality:</strong>
+local two-player action-fighting game with different types of attacks and special winning screens for both player 1 and 2.
+</li>
+
+<li><strong>Technical Merit:</strong>
+Multiplayer game on one keyboard
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+The easiest part was having the original code as the foundation, but I ended up rewriting all of the movement controls and changing the key binding for player 1. I messed around with knockback, but found that it was not really fair if the player was moving and attacking. So I ended up creating a dash-attack instead, where you go through the enemy to the other side, sort of like a teleport-attack. Visual improvements, added sounds, removed platforms from the first game, and added game states to make the game more advanced.
+</li>
+
+<li><strong>Prototype Assets:</strong>
+My prototype is an improvement on my first digital game.
+<ul>
+<li>Backgrounds: <a href="https://feheroes.gamepedia.com/Combat_backgrounds">Fire Emblem Heroes</a></li>
+<li>Sprite: <a href="https://rvros.itch.io/animated-pixel-hero">Itch.io</a></li>
+<li>Battle Music: <a href="https://downloads.khinsider.com/game-soundtracks/album/super-smash-bros.-for-nintendo-3ds-and-wii-u-vol-27.-final-fantasy"> Super Smash Bros / Final Fantasy</a>.</li>
+<li>Intro Music: <a href="http://www.ffmages.com/final-fantasy-xiii/original-soundtrack/">Final Fantasy XIII</a></li>
+<li>Victory Music: <a href="https://downloads.khinsider.com/game-soundtracks/album/super-smash-bros.-for-nintendo-3ds-and-wii-u-vol-30.-victory-jingles/32.%2520Final%2520Fantasy%2520Victory%2520Theme%2520%2528No%2520Loop%2529.mp3">Super Smash Bros / Final Fantasy</a></li>
+<li>Slashing Sounds: <a href="https://www.sounds-resource.com/wii_u/supersmashbrosforwiiu/sound/5360/">Super Smash Bros Wii U</a></li>
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+This prototypes closest other game is my first digital game, Adventurer Fight.
+</li>
+
+<li><strong>High Concept:</strong>
+A two-player fighting game where the objective is to reduce the enemy player's health to 0.
+</li>
+
+<li><strong>Theme:</strong>
+The theme was an improved version of a previous game. The original theme of Adventurer Fight was a multiplayer game.
+</li>
+
+<li><strong>Mandated Variety:</strong>
+Gameplay varies from person to person, but always starts out the same starting positions. Fighting genre, no luck-based mechanics.
+</li>
+
+<li><strong>Prototype Goal:</strong>
+Unique winning states for each player. Also testing combat gameplay to see if it is necessary to specifically declare and create attack and body hitboxes, rather than using the sprites boundaries. Another idea I wanted to test was implementing two different types of attacks, but not just for aesthetic. I wanted to create moves that look cool and give the player options.
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+A fun and competitive experience, with simple controls.
+</li>
+
+<li><strong>Gameplay:</strong>
+The player can move left, right, jump, and attack. There are two different attacks: standing attacks and moving attacks. Standing attacks are, as the name implies, when you attack when standing still. Moving attacks happen when the player is moving and attacking. When in range, a moving attack will dash through the enemy player, and will do slightly more damage than standing attacks.
+The controls for player one are arrows to move and jump and ENTER to attack. The controls for player two are WASD keys to move and F to attack. I have removed the energy system from the first game, as it seemed to slow the game.
+</li>
+
+<li><strong>Strategies:</strong>
+What player strategies do you expect will be effective at playing this game?
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+This game is set in a fantasy world with an adventurers guild. Adventurer Fight 2 continues the fight between Red and Blue to decide which one of them is the best swordsman in the guild.
+</li>
+
+<li><strong>Target Audience:</strong>
+Fighting game audience
+</li>
+
+<li><strong>Play Time:</strong>
+1-2 minutes playtime
+</li>
+
+</ul>
+</div>
+</body>
+</html>
