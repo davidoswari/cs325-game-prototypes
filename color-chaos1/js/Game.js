@@ -15,6 +15,8 @@ GameStates.makeGame = function( game, shared ) {
     var moves1, moves2, moves3, moves4 = null;
     var box1,box2,box3,box4 = null;
     var attacked1, attacked2, attacked3, attacked4;
+    var attacksound = null;
+    var music = null;
   
     var max1 = null;
     var max2 = null;
@@ -321,24 +323,29 @@ GameStates.makeGame = function( game, shared ) {
               {
                   health3-=oneto3;
                   moves1 = max1;
-                
+                          attacksound.play();
               }
           if (unit1.x-100 == unit3.x && unit1.y==unit3.y)//check left
               {
                   health3-=oneto3;
                   moves1 = max1;
+                          attacksound.play();
+
           
               }
           if(unit1.y-100 == unit3.y && unit1.x == unit3.x)// check up
               {
                   health3-= oneto3;
                   moves1 = max1;
-                
+                        attacksound.play();
+
               }
           if(unit1.y+100==unit3.y && unit1.x == unit3.x)//check down
               {
                   health3-=oneto3;
                   moves1 = max1;
+                          attacksound.play();
+
                 
               }
             //ONE TO FOUR
@@ -346,24 +353,32 @@ GameStates.makeGame = function( game, shared ) {
               {
                   health4-=oneto4;
                   moves1 = max1;
+                          attacksound.play();
+
                  
               }
           if (unit1.x-100 == unit4.x && unit1.y==unit4.y)//check left
               {
                   health4-=oneto4;
                   moves1 = max1;
+                          attacksound.play();
+
                  
               }
           if(unit1.y-100 == unit4.y && unit1.x == unit4.x)// check up
               {
                   health4-= oneto4;
                   moves1 = max1;
+                          attacksound.play();
+
                  
               }
           if(unit1.y+100==unit4.y && unit1.x == unit4.x)//check down
               {
                   health4-=oneto4;
                   moves1 = max1;
+                          attacksound.play();
+
                 
               }
         },
@@ -374,24 +389,32 @@ GameStates.makeGame = function( game, shared ) {
               {
                   health3-=twoto3;
                   moves2 = max2;
+                          attacksound.play();
+
                 
               }
           if (unit2.x-100 == unit3.x && unit2.y==unit3.y)//check left
               {
                   health3=twoto3;
                   moves2 = max2;
+                          attacksound.play();
+
           
               }
           if(unit2.y-100 == unit3.y && unit2.x == unit3.x)// check up
               {
                   health3=twoto3;
                   moves2 = max2;
+                          attacksound.play();
+
                 
               }
           if(unit2.y+100==unit3.y && unit2.x == unit3.x)//check down
               {
                   health3-=twoto3;
                   moves2 = max2;
+                          attacksound.play();
+
                 
               }
             //TWO TO FOUR
@@ -399,24 +422,32 @@ GameStates.makeGame = function( game, shared ) {
               {
                   health4-=twoto4;
                   moves2 = max2;
+                          attacksound.play();
+
                  
               }
           if (unit2.x-100 == unit4.x && unit2.y==unit4.y)//check left
               {
                   health4-=twoto4;
                   moves2 = max2;
+                          attacksound.play();
+
                  
               }
           if(unit2.y-100 == unit4.y && unit2.x == unit4.x)// check up
               {
                   health4-= twoto4;
                   moves2 = max2;
+                          attacksound.play();
+
                  
               }
           if(unit2.y+100==unit4.y && unit2.x == unit4.x)//check down
               {
                   health4-=twoto4;
                   moves2 = max2;
+                          attacksound.play();
+
                 
               }
         },
@@ -428,24 +459,32 @@ GameStates.makeGame = function( game, shared ) {
               {
                   health1-=threeto1;
                   moves3 = max3;
+                          attacksound.play();
+
                 
               }
           if (unit3.x-100 == unit1.x && unit3.y==unit1.y)//check left
               {
                   health1-=threeto1;
                   moves3 = max3;
+                          attacksound.play();
+
           
               }
           if(unit3.y-100 == unit1.y && unit3.x == unit1.x)// check up
               {
                   health1-=threeto1;
                   moves3 = max3;
+                          attacksound.play();
+
                 
               }
           if(unit3.y+100==unit1.y && unit3.x == unit1.x)//check down
               {
                   health1-=threeto1;
                   moves3 = max3;
+                          attacksound.play();
+
                 
               }
             //THREE TO TWO
@@ -453,24 +492,32 @@ GameStates.makeGame = function( game, shared ) {
               {
                   health2-=threeto2;
                   moves3 = max3;
+                          attacksound.play();
+
                  
               }
           if (unit3.x-100 == unit2.x && unit3.y==unit2.y)//check left
               {
                   health2-=threeto2;
                   moves3 = max3;
+                          attacksound.play();
+
                  
               }
           if(unit3.y-100 == unit2.y && unit3.x == unit2.x)// check up
               {
                    health2-=threeto2;
                   moves3 = max3;
+                          attacksound.play();
+
                  
               }
           if(unit3.y+100==unit2.y && unit3.x == unit2.x)//check down
               {
                   health2-=threeto2;
                   moves3 = max3;
+                          attacksound.play();
+
                 
               }
         },
@@ -481,49 +528,58 @@ GameStates.makeGame = function( game, shared ) {
               {
                   health1-=fourto1;
                   moves4 = max4;
-                
+                        attacksound.play();
+
               }
           if (unit4.x-100 == unit1.x && unit4.y==unit1.y)//check left
               {
                   health1-=fourto1;
                   moves4 = max4;
-          
+                  attacksound.play();
+
               }
           if(unit4.y-100 == unit1.y && unit4.x == unit1.x)// check up
               {
                 health1-=fourto1;
                   moves4 = max4;
-                
+                        attacksound.play();
+
               }
           if(unit4.y+100==unit1.y && unit4.x == unit1.x)//check down
               {
                   health1-=fourto1;
                   moves4 = max4;
-                
+        attacksound.play();
+
               }
             //FOUR TO TWO
         if(unit4.x+100 ==unit2.x && unit4.y == unit2.y)//check right
               {
                   health2-=fourto2;
                   moves4 = max4;
+                          attacksound.play();
+
               }
           if (unit4.x-100 == unit2.x && unit4.y==unit2.y)//check left
               {
                  health2-=fourto2;
                   moves4 = max4;
-                 
+        attacksound.play();
+
               }
           if(unit4.y-100 == unit2.y && unit4.x == unit2.x)// check up
               {
                   health2-=fourto2;
                   moves4 = max4;
-                 
+        attacksound.play();
+
               }
           if(unit4.y+100==unit2.y && unit4.x == unit2.x)//check down
               {
                   health2-=fourto2;
                   moves4 = max4;
-                
+                        attacksound.play();
+
               }
         },
         
@@ -554,6 +610,11 @@ GameStates.makeGame = function( game, shared ) {
         
         create: function () 
         {
+        attacksound = game.add.audio('attack');
+        music = game.add.audio('music');
+        music.play();
+        music.volume = .5;
+            
         attacked1=1;
         attacked2=1;
         attacked3=1;
@@ -667,21 +728,25 @@ GameStates.makeGame = function( game, shared ) {
                 {
                     unit1.visible = false;
                     state1 = 2;
+                    n1.visible = false;
                 }
             if(health2<=0)
                 {
                     unit2.visible = false;
                     state2 = 2;
+                    n2.visible = false;
                 }
                 if(health3<=0)
                 {
                     unit3.visible = false;
                     state3 = 2;
+                    n3.visible = false;
                 }
                         if(health4<=0)
                 {
                     unit4.visible = false;
                     state4 =2;
+                    n4.visible = false;
                 }
 
 

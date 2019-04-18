@@ -23,10 +23,16 @@ GameStates.makeMainMenu = function( game, shared ) {
             //	Here all we're doing is playing some music and adding a picture and button
             //	Naturally I expect you to do something significantly better :)
     
-            music = game.add.audio('titleMusic');
+            music = game.add.audio('menu');
+            music.volume = .5;
             music.play();
     
-            game.add.sprite(0, 0, 'titlePage');
+            var title = game.add.sprite(0, 0, 'titlePage');
+            title.height= 600;
+            title.width = 800;
+            var style = { font: "60px Courier", fill: "#fff", tabs: 132 };
+            game.add.text(230,200,"Color Chaos", style);
+            
     
             playButton = game.add.button( 303, 400, 'playButton', startGame, null, 'over', 'out', 'down');
     
