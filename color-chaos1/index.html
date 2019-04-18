@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Phaser Basic Project Template</title>
+	<script src="js/phaser.min.js"></script>
+	<!-- Boot.js must come first since it creates the BasicGame object
+	that stores all the states. -->
+	<script src="js/Boot.js"></script>
+	<script src="js/Preloader.js"></script>
+	<script src="js/MainMenu.js"></script>
+	<script src="js/Game.js"></script>
+	<!-- main.js must come last since it references the other ones. -->
+	<script src="js/main.js"></script>
+
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+<div id="game"></div>
+<div id="readme">
+<h2>Color Chaos</h2>
+
+<ul>
+<li><strong>Originality:</strong>
+A player vs player strategy game in which the players control a team of units with color-based attacks. Each have their own respective strengths and weaknesses, but the player can also choose to randomly change the color of their units to mix up gameplay. So there is a mix of luck and skill.
+</li>
+
+<li><strong>Technical Merit:</strong>
+This game can be played with mouse and keyboard.
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+I learned how to turn a physical game prototype into a digital prototype. I did not expect so many if-statements, and found difficulty managing so many variables and interactions. Ultimately, I had to cut out some aspects that were included in the physical prototype such as the larger team size, and the ability to attack from a distance with a weak-attack. Debugging was a nightmare, as there were so many lines of code to go through and had to make each variable name was correct.
+</li>
+
+<li><strong>Prototype Assets:</strong>
+Did you make your prototype assets from scratch? Did you borrow them? Cite your sources here.
+<ul>
+
+<li>5x5 grid image<a href="https://www.draftingsuppliesdew.com/clearprint-1000-8410-vellum-1000hp-5-85x11-pad"> Click Here</a></li>
+
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+Which other game most closely resembles your game? If you are borrowing code from a Phaser Example, you must say so here. If you borrow code from elsewhere, you must say so here.
+<ul>
+<li>This game most closely resembles my physical prototype, which was inspired by fire emblem. However, it has a more luck-based component, which is the color-changing ability, and the added ability to reposition if you attack</li>
+</ul>
+</li>
+
+<li><strong>High Concept:</strong>
+A player vs player strategy game in which each player controls a team of 2 units with color-based attacks to eliminate the enemy team. 
+</li>
+
+<li><strong>Theme:</strong>
+Theme is a digital prototype based off of a physical prototype of a strategy game.
+</li>
+
+<li><strong>Mandated Variety:</strong>
+Game varies each time you play it. The units at the start all start with random colors and have random number of steps that can be taken each turn. Though the player can change the color of their units, the selection of the new color is also random. However there are some elements of skill to be considered, such as the number of steps you can take after attacking is the same number of steps as the initial move phase.
+</li>
+
+<li><strong>Prototype Goal:</strong>
+The goal was to test the color changing ability, as well as the damage values for strong, normal and weak attacks. These values were originally for a 4v4 team, but might make the game too short.
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+I want the player to have a somewhat competitive experience while still having fun.
+</li>
+
+<li><strong>Gameplay:</strong>
+The players SELECT the unit they want to move with the '1', '2', '3', and '4' number keys, and move the selected unit with the arrow keys.
+The max number of steps each unit can take per turn is randomly determined every turn. The player can change the color of their currently selected unit with the 'c' key once per turn at any time.
+Strong attacks deal 5 damage, normal attacks deal 3, and weak damage deal 2. Red is strong to green, green is strong to blue, blue is strong to red. Same colors do normal damage.
+A unit can only attack enemy units if they are in an adjacent spot (no diagonals) with the SPACEBAR, and can move again only if they attacked that turn.
+The player ends their turn with the ENTER key.
+The player that defeats the enemy units wins!
+</li>
+
+<li><strong>Strategies:</strong>
+Change the color of units to deal strong damage to your opponents units.
+Finish off units with weak damage if you can, to avoid the need to change color.
+Position your units so you can attack both enemy units with the same unit.
+Position your units so that they wont both be hit by the same unit in one turn.
+Get as much distance from enemy after attacking, because they might not be able to attack you the next turn if you are too far.
+
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+This is an abstract game, so there is not much of a setting as of now. Though, I may add one later.
+</li>
+
+<li><strong>Target Audience:</strong>
+People who like strategy games, but are not super serious about winning.
+</li>
+
+<li><strong>Play Time:</strong>
+This version with less units and smaller map size should take about 2-3 minutes
+</li>
+
+</ul>
+</div>
+</body>
+</html>
